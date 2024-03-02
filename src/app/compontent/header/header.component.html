@@ -3,31 +3,40 @@
         <img src="../../../assets/images/header/logo.png" id="logo" alt="logo" style="width:200%; height: 60px; margin-top: 10px;" />
     </div>
     <!-- menu.component.html -->
+   
+      <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true" >
+      <a mat-button routerLink="/lists">
+        <mat-icon>home</mat-icon>
+      <span style=" color: #493d05de ;font-weight: bold;"> Home</span> 
+      </a> 
+      <button mat-button [matMenuTriggerFor]="menu" aria-label="User Account">
+        <span style=" color: #493d05de ;font-weight: bold;"> Certificate</span>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item  (click)="getvalidcertificate()">
+          <mat-icon style=" color: rgba(170, 143, 23, 0.87);;
+          "> home</mat-icon>Valid_Certificate
+        </button>
+        <button mat-menu-item (click)="getinvalidcertificate()">
+          <mat-icon style=" color: rgba(170, 143, 23, 0.87);
+          ">home</mat-icon>invalid certificate</button>
+        <button mat-menu-item (click)="getallcertificate()">
+          <mat-icon style=" color: rgba(170, 143, 23, 0.87); 
+          ">home</mat-icon>getAllcertificate</button>
+      </mat-menu>
+      <a mat-button routerLink="/content-us">
+        <mat-icon>contact_support</mat-icon>
+        <span style=" color: #493d05de;font-weight: bold;"> Contact Us</span>
+      </a>
+    </div>
 
-<button mat-button [matMenuTriggerFor]="menu" style="color: white; width: 50px;font-weight: bold;">
+<button mat-button [matMenuTriggerFor]="menu">
     <mat-icon >menu</mat-icon> 
   </button>
   
-  <mat-menu #menu="matMenu">
-    <mat-nav-list class="list">
-        <a mat-list-item routerLink="/" class="menu-item-primary">
-          <mat-icon>home</mat-icon>
-          Home
-        </a>
-        <a mat-list-item routerLink="/about" class="menu-item-secondary">
-          <mat-icon>info</mat-icon>
-          About
-        </a>
-        <a mat-list-item routerLink="/contact" class="menu-item-tertiary">
-          <mat-icon>contact_support</mat-icon>
-          Contact Us
-        </a>
-        <a mat-list-item routerLink="/help" class="menu-item-quaternary">
-          <mat-icon>help</mat-icon>
-          Help
-        </a>
-      </mat-nav-list>
-  </mat-menu>
+
   
     
 

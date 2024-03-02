@@ -1,0 +1,19 @@
+<div class="container" *ngIf="flag">
+    <mat-card [@fadeInOutAnimation]>
+      <mat-card-content>
+        <h2>Select Excel File</h2>
+        <input (change)="selectfile($event)" type="file">
+        <button (click)="upload()" mat-raised-button color="primary">Upload File</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  <div class="container" *ngIf="!flag">
+    <mat-card [@fadeInOutAnimation]>
+      <mat-card-content>
+        <h1>Please wait....</h1>
+        <h2>Uploading...</h2>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

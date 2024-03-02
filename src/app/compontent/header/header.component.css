@@ -11,8 +11,8 @@
   
   .start img,
   .menu img {
-    width: 30px; /* Adjust the size as needed */
-    height: auto;
+    width: 100px; /* Adjust the size as needed */
+    height: 100px;
     cursor: pointer;
   }
   button {
@@ -26,3 +26,27 @@
     font-size: 24px;
   }
 
+div {
+    overflow: inherit;
+}
+a{
+    text-decoration: none;
+    font-size: 110%;
+    white-space: normal;
+    
+}
+
+
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-button {
+    color: white;
+  }
+  .mat-mdc-button:not(:disabled){
+    color: rgba(170, 143, 23, 0.87);
+    font-size: 20px;
+    padding-right:30px;
+  }

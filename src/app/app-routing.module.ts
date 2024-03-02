@@ -6,6 +6,12 @@ import { RegisterComponent } from './compontent/register/register.component';
 import { HomeComponent } from './compontent/home/home.component';
 import{NavbarComponent} from'./compontent/navbar/navbar.component';
 import { ListsComponent } from './compontent/lists/lists.component';
+import { ContentUsComponent } from './compontent/content-us/content-us.component';
+import { InvalidCertifcateComponent } from './compontent/invalid-certifcate/invalid-certifcate.component';
+import { ValidCertifcateComponent } from './compontent/valid-certifcate/valid-certifcate.component';
+import { AllDataComponent } from './compontent/all-data/all-data.component';
+import { PaginationComponent } from './compontent/pagination/pagination.component';
+import { UpdateKamelComponent } from './compontent/update-kamel/update-kamel.component';
 
 
 
@@ -41,10 +47,34 @@ component:NavbarComponent
   path:'lists',
   component:ListsComponent
   },
+  {
+    path:'content-us',
+    component:ContentUsComponent
+    },
 
+      {
+      path:'invalid-certifcate',
+      component:InvalidCertifcateComponent
+      },
+      {
+        path:'valid-certifcate',
+        component:ValidCertifcateComponent
+        },
+        {
+          path:'all-data',
+          component:AllDataComponent
+          },
+          {
+            path:'UpdateKmal',
+            component:UpdateKamelComponent
+            },
+{
+  path:'pagination',
+  component:PaginationComponent
+},
 
 {
-  path:'',redirectTo:'home',pathMatch:'full'
+  path:'',redirectTo:'lists',pathMatch:'full'
 },
 
 ]

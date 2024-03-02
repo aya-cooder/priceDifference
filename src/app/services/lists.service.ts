@@ -9,9 +9,9 @@ export class ListsService {
   constructor(private http: HttpClient) {}
   
 
-  getAllData(searchQuery:any ) {
+  getAllData() {
    
-    return this.http.get(environment.baseApi+`/WeatherForecast?requestNumber=${searchQuery}`);
+    return this.http.get(environment.baseApi+`/WeatherForecast`);
 
   }
 }

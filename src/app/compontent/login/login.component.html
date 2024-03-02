@@ -22,19 +22,24 @@
        </div>
        <div class="field">
         <label for="password">password</label>
-        <input type="password" 
-        pInputText formControlName="password" 
-        class="w-full" 
-        name="email"
-         placeholder="At least 6 characters"
-         />
-      
+        <div class="password-input">
+            <input type="{{ showPassword ? 'text' : 'password' }}" id="password" pInputText formControlName="password"  class="w-full" placeholder="At least 6 characters" required>
+            <mat-icon (click)="togglePasswordVisibility()" >
+                {{ showPassword ? 'visibility_off' : 'visibility' }}
+              </mat-icon>
+          </div>
+
+         <small *ngIf="password.invalid &&(password.dirty ||password.touched )"
+         class="block p-error">
+          <div *ngIf="password.errors?.['required']">password is required </div>
+         </small>
+    </div>
          <small *ngIf="password.invalid &&(password.dirty ||password.touched )"
          class="block p-error">
           <div *ngIf="password.errors?.['required']">password is required </div>
          </small>
        <div class="mt-2"> <a class="  forget" href=""> Forget password</a></div>
-       </div>
+      
        <input type="submit" id="Login" 
        class="form-control"
         value="submit" 

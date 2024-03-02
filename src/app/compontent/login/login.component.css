@@ -36,3 +36,21 @@ input[type="button"] {
     margin-top: 30px;
   }
 
+  .field {
+    position: relative;
+  }
+  
+  .password-input {
+    position: relative;
+  }
+  
+  .password-input mat-icon {
+    color: rgba(170, 143, 23, 0.87);
+    position: absolute;
+    bottom: 8px; /* Adjust the distance from the bottom of the input */
+    right: 5px; /* Adjust the distance from the right of the input */
+    cursor: pointer;
+    width: 34px
+  }
+  
+  

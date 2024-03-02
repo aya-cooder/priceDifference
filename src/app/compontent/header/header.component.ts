@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-header',
@@ -6,13 +9,44 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  login(): void {
-    // Logic for login action
+  constructor(private router: Router,private spinner: NgxSpinnerService  ){}
+  getvalidcertificate(){
+    this.showSpinner();
+    // Your logic for getvalidcertificate() here
+
+    // Simulate an asynchronous operation (e.g., HTTP request)
+    setTimeout(() => {
+      this.hideSpinner();
+    }, 5000); // Adjust the timeout as needed
+    this.router.navigate(['/valid-certifcate']);
+  }
+  getinvalidcertificate(){
+    this.showSpinner();
+    // Your logic for getvalidcertificate() here
+
+    // Simulate an asynchronous operation (e.g., HTTP request)
+    setTimeout(() => {
+      this.hideSpinner();
+    }, 5000); 
+    this.router.navigate(['/invalid-certifcate']);
+  }
+  getallcertificate(){
+    this.showSpinner();
+    // Your logic for getvalidcertificate() here
+
+    // Simulate an asynchronous operation (e.g., HTTP request)
+    setTimeout(() => {
+      this.hideSpinner();
+    }, 5000); 
+    this.router.navigate(['/all-data']);
+
+  }
+  private showSpinner(): void {
+    this.spinner.show();
   }
 
-  register(): void {
-    // Logic for register action
+  private hideSpinner(): void {
+    this.spinner.hide();
   }
-
 
 }

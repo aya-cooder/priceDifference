@@ -26,20 +26,25 @@ import { MatMenuModule} from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import{MatListModule}from'@angular/material/list';
 import{MatButtonModule} from'@angular/material/button';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { ListsComponent } from './compontent/lists/lists.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FooterComponent } from './compontent/footer/footer.component';
+import { ContentUsComponent } from './compontent/content-us/content-us.component';
+import { InvalidCertifcateComponent } from './compontent/invalid-certifcate/invalid-certifcate.component';
+import { ValidCertifcateComponent } from './compontent/valid-certifcate/valid-certifcate.component';
+import { AllDataComponent } from './compontent/all-data/all-data.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatCardModule } from "@angular/material/card";
+import { PaginationComponent } from './compontent/pagination/pagination.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { PaginationDirective } from './directives/pagination.directive';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { UpdateKamelComponent } from './compontent/update-kamel/update-kamel.component';
 
 
-
-
-
-
-
-
- 
 
 @NgModule({
   declarations: [
@@ -52,11 +57,14 @@ import { FooterComponent } from './compontent/footer/footer.component';
     HomeComponent,
     ListsComponent,
     FooterComponent,
-
+    ContentUsComponent,
+    InvalidCertifcateComponent,
+    ValidCertifcateComponent,
+    AllDataComponent,
+    PaginationComponent,
+    PaginationDirective,
+    UpdateKamelComponent,
    
-   
-  
-
   
   ],
   imports: [
@@ -78,15 +86,16 @@ import { FooterComponent } from './compontent/footer/footer.component';
     MatSidenavModule ,
     MatListModule,
     MatButtonModule,
+    MatPaginatorModule,
     MatInputModule,MatTableModule,
-    HttpClientModule,MatDialogModule
+    HttpClientModule,MatDialogModule,
+    FlexLayoutModule, MatCardModule ,
+    NgxPaginationModule,  
+    NgxSpinnerModule.forRoot({ type: 'ball-circus' }),
    
-    
-    
-    
-    
 
   ],
+ 
   providers: [MessageService],
   bootstrap: [AppComponent]
 })

@@ -45,4 +45,8 @@ constructor(private fb:FormBuilder,
   )
     
  }
+ showPassword: boolean = false;
+ togglePasswordVisibility() {
+   this.showPassword = !this.showPassword;
+ }
 }

@@ -25,6 +25,7 @@ export class RegisterComponent {
     private router: Router
   ) {}
 
+ 
   get fullName() {
     return this.registerForm.controls['fullName'];
   }
@@ -40,6 +41,17 @@ export class RegisterComponent {
   get confirmPassword() {
     return this.registerForm.controls['confirmPassword'];
   }
+  // Additional properties and methods
+  showPassword: boolean = false;
+  showconfrimpass:boolean=false;
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+  toggleconfirmPasswordVisibility(){
+    this.showconfrimpass = !this.showconfrimpass;
+  }
+
 
   submitDetails() {
     if (this.registerForm.valid) {
